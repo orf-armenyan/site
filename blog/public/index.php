@@ -54,6 +54,4 @@ $response = $kernel->handle(
 );
 
 $response->send();
-//comment
-
 $kernel->terminate($request, $response);
