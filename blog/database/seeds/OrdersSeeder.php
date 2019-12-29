@@ -25,8 +25,6 @@ class OrdersSeeder extends Seeder
 
                 ];
             }
-
-
         DB::table('orders')->insert($data);
     }
 }
