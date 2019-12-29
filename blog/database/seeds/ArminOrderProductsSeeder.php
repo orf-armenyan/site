@@ -21,8 +21,8 @@ class ArminOrderProductsSeeder extends Seeder
 				 'title' => 'Casio test prod',
 				 'price' =>  rand(40,200),
 			 ]
-			}
+			
 		} 
-			DB::table (table 'order_products')->insert(:data);
+			DB::table(table:'order_products')->insert(:$data)
     }
 }
