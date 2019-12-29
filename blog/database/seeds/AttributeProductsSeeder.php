@@ -2,7 +2,7 @@
 
     use Illuminate\Database\Seeder;
 
-    class GalleriesSeeder extends Seeder
+    class AttributeProductsSeeder extends Seeder
     {
         /**
          * Run the database seeds.
@@ -11,19 +11,19 @@
          */
         public function run()
         {
-
             $data = [];
 
-            for ($y = 1; $y <= 17; $y++) {
-                for ($i = 1; $i <= 3; $i++) {
+
+            for ($y = 1; $y <= 12; $y+=4){
+                for ($i = 1; $i <= 17; $i++) {
                     $data[] = [
-                        'product_id' => $y,
-                        'img' => 'g'.$y.'-'.$i.'.png',
+                        'product_id' => $i,
+                        'attr_id' => $y,
                     ];
                 }
             }
 
 
-            DB::table('galleries')->insert($data);
+            DB::table('attribute_products')->insert($data);
         }
     }
